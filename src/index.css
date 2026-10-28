@@ -1,0 +1,68 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600&family=Noto+Sans+Ethiopic:wght@400;500;600;700&family=Noto+Serif+Ethiopic:wght@400;500;600;700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+body {
+  background-color: #fbf7ef;
+  color: #1f1a14;
+  font-family: Inter, "Noto Sans Ethiopic", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+html[lang="am"] body {
+  line-height: 1.75;
+}
+/* Small uppercase labels — Ethiopic has no letter case, so tracking is reduced */
+.caps {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+html[lang="am"] .caps {
+  letter-spacing: 0.02em;
+}
+/* Display headlines */
+.display {
+  font-family: Fraunces, "Noto Serif Ethiopic", Georgia, serif;
+  letter-spacing: -0.015em;
+  line-height: 1.02;
+  text-wrap: balance;
+}
+html[lang="am"] .display {
+  letter-spacing: 0;
+  line-height: 1.28;
+  font-weight: 600;
+}
+.hero-title {
+  font-size: clamp(3rem, 10.5vw, 9.5rem);
+}
+html[lang="am"] .hero-title {
+  font-size: clamp(2.25rem, 7.5vw, 6.75rem);
+}
+.section-title {
+  font-size: clamp(2.1rem, 4.6vw, 4.25rem);
+}
+html[lang="am"] .section-title {
+  font-size: clamp(1.75rem, 3.6vw, 3.25rem);
+}
+.prose-body p + p {
+  margin-top: 1.25em;
+}
+:focus-visible {
+  outline: 2px solid #b48a3c;
+  outline-offset: 3px;
+}
